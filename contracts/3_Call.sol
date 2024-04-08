@@ -324,7 +324,7 @@ interface IHelloWorld3 {
 }
 
 
-contract CallContrac3 {
+contract CallContract3 {
 
     function ResendNotPayableFunction () public payable {
 
@@ -332,11 +332,11 @@ contract CallContrac3 {
 
         // Передаём деньги в функцию receive.
         (bool retCode, bytes memory result) = payable(address(hc)).call{value: msg.value / 3} ("");
-        console.log ("[CallContrac3] receive: retCode = %s\n", retCode);
+        console.log ("[CallContract3] receive: retCode = %s\n", retCode);
 
         // Передаём деньги в функцию NotPayableFunction - вернёт false.
         (retCode, result) = payable(address(hc)).call{value: msg.value / 3} (abi.encodeWithSignature("NotPayableFunction()"));
-        console.log ("[CallContrac3] NotPayableFunction: retCode = %s\n", retCode);
+        console.log ("[CallContract3] NotPayableFunction: retCode = %s\n", retCode);
 
         // Вызываем функцию NotPayableFunction без денег - вернёт true.
         IHelloWorld3(address(hc)).NotPayableFunction();
@@ -348,7 +348,7 @@ contract CallContrac3 {
 
     function fun (uint a) external {
 
-        console.log ("[CallContrac3] fun: a = %s\n", a);
+        console.log ("[CallContract3] fun: a = %s\n", a);
     }
 
     function DemoFun() public {
@@ -365,7 +365,7 @@ contract CallContrac3 {
         hello3.ProxyFun (4);
 
         // При вызове с помощью инструкции delegatecall
-        // внутри будет вызвана функция CallContrac3.fun
+        // внутри будет вызвана функция CallContract3.fun
         address(hello3).delegatecall (abi.encodeWithSignature("ProxyFun(uint256)", 5));
     }
 

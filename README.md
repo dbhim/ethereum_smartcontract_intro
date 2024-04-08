@@ -1,19 +1,19 @@
-[https://github.com/dbhim/ethereum_smartcontract_intro](https://github.com/dbhim/ethereum_smartcontract_intro)
+[https://github.com/dbhim/ethereum_smartcontract_intro](https://github.com/dbhim/ethereum_smartcontract_intro)  
 [https://gitverse.ru/dbhim/ethereum_smartcontract_intro](https://gitverse.ru/dbhim/ethereum_smartcontract_intro)
 
 Здесь представлено небольшое введение в блокчейн, Ethereum, смарт-контракты, Solidity. Это материалы занятия, которое было проведено для студентов старших курсов по специальности "компьютерная безопасность". Предполагается, что у обучающихся имеются соответствующие знания по программированию, базам данных, криптографии, безопасности, эксплуатации уязвимостей. Исходя из этого отбирался материал для занятия и способ его представления.
 
 ### Ethereum
 
-[Описание платформы Ethereum](./ethereum_intro.txt).
+[Описание платформы Ethereum](./ethereum_intro.md).
 
 Для написания смарт-контрактов можно использовать ассемблер. Но обычно используются высокоуровневые языки: Solidity, Vyper, Yul.
 
-[Описание Solidity](./solidity.txt).
+[Описание Solidity](./solidity.md).
 
 Для разработки, тестирования, разворачивания смарт-контрактов используются фреймворки Brownie (Python), Hardhat (JS), Truffle.
 
-[Описание настройки связки hardhat и Remix](./ethereum_devel.txt)
+[Описание настройки связки hardhat и Remix](./ethereum_devel.md)
 
 
 
@@ -92,6 +92,6 @@
 - вызвать функцию `DelegatecallRevert` 2 раза;
 - вызвать функцию `Resend` с 1 и 2 эфирами;
 - вызвать функцию `Retransfer` с 1 и 2 эфирами;
-- задеплоить контракт `CallContrac3`;
+- задеплоить контракт `CallContract3`;
 - вызвать функцию `ResendNotPayableFunction` с 6 эфирами;
 - вызвать функцию `DemoFun`.
