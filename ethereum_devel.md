@@ -38,7 +38,7 @@ https://hardhat.org/hardhat-runner/docs/getting-started)
 `> npm install @remix-project/remixd`  
 Последняя версия v0.6.29
 
-В каталоге с проектом выполнить (в двух отдельных консолях) комады.
+В каталоге с проектом выполнить (в двух отдельных консолях) команды.
 
 Запуск сервера remixd на стандартном адресе 127.0.0.1:65520 для подключения из Remix  
 `> npx remixd -s .`  
@@ -50,3 +50,12 @@ https://hardhat.org/hardhat-runner/docs/getting-started)
 После инициализации hardhat создался тестовый проект с контрактом и тестовым кодом. Проверить командами:  
 `> npx hardhat compile`  
 `> npx hardhat test`  
+
+
+После инициализации и запуска к получившемуся окружению можно подключиться из Remix:
+- на вкладке "File explorer" можно подключиться к workspace localhost (это будет папка, открытая в remixd)
+- на вкладке "Deploy & run transactions" можно подключиться к окружению hardhat node.
+
+Если запущена онлайн-версия Remix в браузере, то можно подключиться к Metamask (выбрать пункт WalletConnect). Таким образом транзакции будут посылаться через Metamask с выбранными в нём сетью и аккаунтом.
+
+В Metamask можно выбрать текущую сеть. EVM сети можно подключить на сайте chainlist.org. Например, сеть [Mumbai](https://chainlist.org/chain/80001), сеть [Polygon Amoy](https://chainlist.org/chain/80002). Можно добавить сеть, вручную указав адрес. Например для локальной сети hardhat: http://localhost:8545.

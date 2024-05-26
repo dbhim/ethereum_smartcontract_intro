@@ -6,7 +6,7 @@ node_modules
 # Hardhat files
 /cache
 /artifacts
-/hardhat.config.js
+#/hardhat.config.js
 /contracts/artifacts
 
 # TypeChain files
@@ -17,5 +17,6 @@ node_modules
 /coverage
 /coverage.json
 
-remix-compiler.config.js
-package.json
+#remix-compiler.config.js
+#package.json
+package-lock.json

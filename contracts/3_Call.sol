@@ -232,7 +232,7 @@ contract CallContract2 is DebugPrintContract {
         HelloWorld2 hc = (new HelloWorld2) ();
         
         // Здесь в вызов staticcall передаём небольшое количество газа.
-        // В каждом вызове еесь переданный газ сгорит, но в текущем вызове газ
+        // В каждом вызове весь переданный газ сгорит, но в текущем вызове газ
         // останется для следующих вызовов.
         DebugPrint ("staticcall Revert(0) gasleft = ", gasleft());
         (bool retCode, bytes memory result) = address(hc).staticcall{gas: 1000} (abi.encodeWithSignature("Revert(uint256)", 0));
